@@ -100,9 +100,9 @@ app.put("/change-password", async (request, response) => {
               UPDATE 
                  user 
                SET 
-                  password = `${hashedPassword}`
+                  password = '${hashedPassword}'
                 WHERE 
-                  username = ${username}`;
+                  username = '${username}';`;
             const user = await database.run(updatePasswordQuery);
 
             response.send("Password updated");
